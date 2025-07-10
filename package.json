@@ -11,7 +11,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "postbuild": "cpx dist/index.html dist/404.html"
+    "postbuild": "copy dist\\index.html dist\\404.html"
   },
   "dependencies": {
     "framer-motion": "^10.16.16",
