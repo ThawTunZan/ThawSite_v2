@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
-import { FaGithub, FaYoutube, FaExternalLinkAlt, FaSearch } from 'react-icons/fa'
+import { FaYoutube, FaExternalLinkAlt, FaSearch } from 'react-icons/fa'
 import ProjectCard from '../components/ProjectCard'
 
 const Projects = () => {
