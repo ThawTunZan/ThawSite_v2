@@ -24,7 +24,7 @@ const Home = () => {
               Welcome to My Portfolio
             </h2>
             <p className="text-lg text-primary-300 mb-8 leading-relaxed">
-              I'm a Year 2 Computer Engineering student at NUS with a minor in Physics. 
+              I'm a Year 3 Computer Engineering student at NUS with a minor in Physics. 
               I'm passionate about embedded systems, game development, and creating 
               innovative solutions that bridge hardware and software.
             </p>

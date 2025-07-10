@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
 import { FaYoutube, FaExternalLinkAlt, FaSearch } from 'react-icons/fa'
-import ProjectCard from '../components/ProjectCard'
+import projectsData from './ProjectsData';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -14,7 +15,7 @@ const Projects = () => {
       title: 'EE2026 Digital Design',
       subtitle: 'FPGA Bomb Tag Game',
       description: 'A semester-long project developing a 4-player multiplayer game on FPGA boards. Features include UART communication between boards, physics animations with gravity effects, and real-time gameplay mechanics. Players must pass a bomb before it explodes, with the last player standing winning.',
-      image: '/images/FPGABoard.png',
+      image: 'images/FPGABoard.png',
       technologies: ['FPGA', 'UART', 'VHDL', 'Hardware Design', 'Multiplayer'],
       category: 'hardware',
       github: '',
@@ -28,7 +29,7 @@ const Projects = () => {
       title: 'CP2106 (Orbital)',
       subtitle: 'NUqueSt Unity Game',
       description: 'Educational game inspired by Stardew Valley and Animal Crossing, designed to introduce NUS freshmen to university modules. Features AI pathfinding with obstacle avoidance, OOP architecture, comprehensive testing, and project management practices including agile methodologies.',
-      image: '/images/nuquest.png',
+      image: 'images/nuquest.png',
       technologies: ['Unity', 'C#', 'AI', 'OOP', 'Testing', 'Game Development'],
       category: 'software',
       github: 'https://github.com/ThawTunZan/Thaw-and-Ryan-NUqueSt',
@@ -42,7 +43,7 @@ const Projects = () => {
       title: 'CG2111A Engineering',
       subtitle: 'mBot Maze Navigation',
       description: '4-person project to develop a remote control robot capable of navigating through mazes. Utilizes Arduino programming, LiDAR for obstacle detection, communication protocols, and hardware peripherals for autonomous navigation and color identification.',
-      image: '/images/cg2111a.png',
+      image: 'images/cg2111a.png',
       technologies: ['Arduino', 'LiDAR', 'C++', 'Hardware', 'Robotics'],
       category: 'hardware',
       github: 'https://github.com/ThawTunZan/Alex-Bot',
@@ -56,7 +57,7 @@ const Projects = () => {
       title: 'Connect 4',
       subtitle: 'Web-based Game',
       description: 'Solo side project for initial exposure to web development. Features physics-based animations for piece dropping, responsive design, and smooth gameplay mechanics using vanilla JavaScript, HTML, and CSS.',
-      image: '/images/connect4.png',
+      image: 'images/connect4.png',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Web Development'],
       category: 'web',
       github: 'https://github.com/ThawTunZan/Connect4',
@@ -70,7 +71,7 @@ const Projects = () => {
       title: 'Two Player Snake Game',
       subtitle: 'Offline Multiplayer',
       description: 'Web-based two-player snake game built with vanilla JavaScript. Features competitive gameplay, collision detection, score tracking, and responsive controls for both players on the same device.',
-      image: '/images/snake.png',
+      image: 'images/snake.png',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Game Development'],
       category: 'web',
       github: 'https://github.com/ThawTunZan/Two-Player-Snake',
@@ -176,7 +177,21 @@ const Projects = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <ProjectCard project={project} />
+                <div className="bg-primary-800 rounded-lg shadow-lg p-6 flex flex-col">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${project.image}`}
+                    alt={project.title}
+                    className="w-full h-40 object-cover rounded mb-4"
+                    onError={(e) => {
+                      e.currentTarget.src = `${import.meta.env.BASE_URL}images/placeholder.png`;
+                    }}
+                  />
+                  <h2 className="text-xl font-bold text-accent-400 mb-1">{project.title}</h2>
+                  <p className="text-primary-300 mb-2 font-semibold">{project.subtitle}</p>
+                  <p className="text-primary-400 mb-4 line-clamp-3">{project.description}</p>
+                  <div className="flex-1" />
+                  <Link to={`/projects/${project.id}`} className="btn-primary mt-2 self-start">Read More</Link>
+                </div>
               </motion.div>
             ))}
           </motion.div>

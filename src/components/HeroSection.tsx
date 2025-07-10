@@ -27,7 +27,7 @@ const HeroSection = () => {
           >
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-accent-500 shadow-2xl">
               <img
-                src="/images/me.jpg"
+                src="images/me.jpg"
                 alt="Thaw Tun Zan"
                 className="w-full h-full object-cover"
                 onError={(e) => {

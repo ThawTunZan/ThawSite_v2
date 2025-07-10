@@ -368,7 +368,7 @@ const About = () => {
             <div className="text-center lg:text-left">
               <div className="w-64 h-64 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-accent-500 shadow-2xl mb-6">
                 <img
-                  src="/images/me.jpg"
+                  src="images/me.jpg"
                   alt="Thaw Tun Zan"
                   className="w-full h-full object-cover"
                   onError={(e) => {
