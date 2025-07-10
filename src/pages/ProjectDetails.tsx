@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaGithub, FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
+import { FaArrowLeft, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import projectsData, { Project } from './ProjectsData';
 
 const ProjectDetails = () => {

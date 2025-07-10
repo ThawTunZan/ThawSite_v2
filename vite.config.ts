@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/ThawSite_v2/',
-  plugins: [react()],
+  plugins: [
+    react(),
+  ],
   server: {
     port: 3000,
     open: true
