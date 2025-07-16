@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import projectsData, { Project } from './ProjectsData';
+import projectsData, { Project } from '../Data/ProjectsData';
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();

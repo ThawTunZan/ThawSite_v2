@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import About from './pages/About'
 import ProjectDetails from './pages/ProjectDetails';
+import Modules from './pages/Modules'
+import ModuleDetails from './pages/ModuleDetails';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects/:id" element={<ProjectDetails />} />
+            <Route path="/modules" element={<Modules />} />
+            <Route path="/modules/:id" element={<ModuleDetails />} />
           </Routes>
         </main>
         <Footer />
