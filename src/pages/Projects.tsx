@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
-import { FaYoutube, FaExternalLinkAlt, FaSearch } from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import projectsData from '../Data/ProjectsData';
 

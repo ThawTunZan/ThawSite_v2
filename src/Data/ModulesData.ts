@@ -1,5 +1,4 @@
 // Shared project data for Projects and ProjectDetails pages
-import { FaYoutube, FaExternalLinkAlt } from 'react-icons/fa';
 
 export type Module = {
   id: number;

@@ -62,7 +62,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg text-primary-400 mb-8 max-w-2xl mx-auto"
           >
-            Year 2 NUS Student with minor in Physics • 
+            Year 4 NUS Student with minor in Physics • 
             Passionate about Embedded Systems & Game Development
           </motion.p>
 
